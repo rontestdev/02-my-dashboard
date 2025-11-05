@@ -8,7 +8,7 @@ interface Props {
 
 export const PokemonCard = ({ pokemon }: Props) => {
   return (
-    <article key={pokemon.id} className="border rounded-md border-neutral-500 p-2 grid grid-cols-1 grid-rows-[100px_20px_20px] gap-2">
+    <article key={pokemon.id} className="border rounded-md border-neutral-500 p-2 grid grid-cols-1 grid-rows-[100px_20px_20px] gap-2 hover:scale-105 transition-transform hover:bg-teal-800/50">
       <Image 
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
         width={80}
