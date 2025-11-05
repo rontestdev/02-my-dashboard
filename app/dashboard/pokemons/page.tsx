@@ -1,5 +1,5 @@
-import { PokemonsResponse, SimplePokemon } from "@/app/pokemons";
-import { PokemonGrid } from "@/app/pokemons";
+import { PokemonsResponse, SimplePokemon } from "@/pokemons";
+import { PokemonGrid } from "@/pokemons";
 
 const getPokemons = async ( limit = 20, offset = 0 ): Promise<SimplePokemon[]> => {
   const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
@@ -8,7 +8,6 @@ const getPokemons = async ( limit = 20, offset = 0 ): Promise<SimplePokemon[]> =
     id: pokemon.url.split('/').at(-2)!,
     name: pokemon.name
   }));
-  throw new Error('Fake test error!');
   return pokemons;
 }
 

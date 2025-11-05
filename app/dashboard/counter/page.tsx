@@ -1,4 +1,4 @@
-import { SimpleCounter } from "@/app/shared/components/SimpleCounter"
+import { SimpleCounter } from "@/shared/components/SimpleCounter"
 
 export const metadata = {
   title: 'Contador',
