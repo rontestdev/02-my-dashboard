@@ -1,4 +1,4 @@
-import { Atom, ClockIcon, LayoutDashboardIcon } from "lucide-react";
+import { Atom, CircleDotIcon, ClockIcon, LayoutDashboardIcon } from "lucide-react";
 import Image from "next/image";
 import { SidebarMenuItem } from "./SidebarMenuItem";
 import { MenuItem } from "../interfaces/menu";
@@ -15,7 +15,13 @@ const menuItems: MenuItem[] = [
     title: 'Counter',
     subtitle: 'Contador Client Side',
     icon: <ClockIcon />,
-  }
+  },
+  {
+    path: '/dashboard/pokemons',
+    title: 'Pokemons',
+    subtitle: 'Static Generation',
+    icon: <CircleDotIcon />,
+  },
 ]
 
 export const Sidebar = () => {
