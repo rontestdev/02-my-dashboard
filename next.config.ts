@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
         hostname: 'avatars.githubusercontent.com'
       }
     ]
+  },
+  turbopack: {
+    root: '/home/vmt-rendaga/Work/Practices/next/02-my-dashboard/'
   }
 };
 

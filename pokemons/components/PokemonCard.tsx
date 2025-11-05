@@ -17,7 +17,7 @@ export const PokemonCard = ({ pokemon }: Props) => {
         priority={false}
       />
       <h2>{pokemon.name}</h2>
-      <Link href={`/pokemon/${ pokemon.id }`}>Más información</Link>
+      <Link href={`/dashboard/pokemons/${pokemon.id}`}>Más información</Link>
     </article>
   )
 }
