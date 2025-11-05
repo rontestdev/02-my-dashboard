@@ -7,7 +7,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <Sidebar />
         <div className="p-2 ms-64">
           {children}
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet enim quisquam architecto repudiandae, blanditiis placeat voluptate reprehenderit. Corporis facilis harum vitae maiores tempore, repudiandae nam, optio, deleniti saepe minus id.
         </div>
       </div>
     </section>
