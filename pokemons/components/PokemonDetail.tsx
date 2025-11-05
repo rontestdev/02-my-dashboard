@@ -1,43 +1,11 @@
-import { Pokemon } from "@/pokemons"
-import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { Pokemon } from "../interfaces/pokemon";
 
-interface PokemonPageProps {
-  params: Promise<{ id: string }>;
+interface Props {
+  pokemon: Pokemon
 }
 
-const getPokemon = async (id: string): Promise<Pokemon> => {
-  try {
-    const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    .then(res => res.json());
-    return pokemon;
-  } catch (error) {
-    notFound();
-  }
-}
-
-export async function generateMetadata({ params }: PokemonPageProps, parent: ResolvingMetadata): Promise<Metadata> {
-  const { id } = await params;
-  try {
-    const pokemon = await getPokemon(id);
-    return {
-      title: `#${id} ${pokemon.name}`,
-      description: `Page for ${pokemon.name} pokemon`
-    }
-  } catch (err) {
-     return {
-      title: 'Página del pokémon',
-      description: 'Culpa cupidatat ipsum magna reprehenderit ex tempor sint ad minim reprehenderit consequat sit.'
-    }
-  }
-}
-
-
-export default async function PokemonPage({ params }: PokemonPageProps) {
-  const { id } = await params;
-  const pokemon = await getPokemon(id);  
-
+export const PokemonDetail = ({pokemon}: Props) => {
   return (
     <div className="flex mt-5 flex-col items-center">
       <div className="relative flex flex-col items-center rounded-[20px] w-[700px] mx-auto bg-clip-border  shadow-lg  p-3">
@@ -127,5 +95,5 @@ export default async function PokemonPage({ params }: PokemonPageProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }
