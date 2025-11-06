@@ -19,13 +19,15 @@ export async function generateStaticParams() {
 }
 
 const getPokemon = async (slug: string): Promise<Pokemon> => {
-  try {
-    const pokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${slug}`)
-    .then(res => res.json());
-    return pokemon;
-  } catch (error) {
-    notFound();
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${slug}`);
+
+  if (!res.ok) {
+    if (res.status === 404) {
+      notFound();
+    }
   }
+  const pokemon = await res.json();
+  return pokemon;
 }
 
 export async function generateMetadata({ params }: PokemonPageProps, parent: ResolvingMetadata): Promise<Metadata> {
