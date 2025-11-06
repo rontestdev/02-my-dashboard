@@ -30,7 +30,7 @@ export const SimpleWidget = ({ title, subtitle, label, icon, href }: Props) => {
               )
             }
             <div id="temp" className="text-center">
-              <h4 className="text-4xl">{title}</h4>
+              <h4 className="text-4xl">{label}</h4>
               {subtitle && <p className="text-xs text-gray-200">{subtitle}</p>}
             </div>
           </div>
@@ -39,7 +39,7 @@ export const SimpleWidget = ({ title, subtitle, label, icon, href }: Props) => {
         {
           href && (
             <div className="w-full place-items-end text-right border-t-2 border-gray-100 mt-2">
-                <Link href={href} className="text-indigo-200 text-xs font-medium">{label}</Link>
+                <Link href={href} className="text-indigo-200 text-xs font-medium">Más</Link>
             </div>
           )
         }

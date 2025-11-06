@@ -10,7 +10,7 @@ export const WidgetsGrid = () => {
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-4">
-      <SimpleWidget title={isCart.toString()} subtitle={"Items agregados"} label="Contador" icon={<ShoppingCartIcon />} />
+      <SimpleWidget title={'Items'} subtitle={"Items agregados"} label={isCart.toString()} icon={<ShoppingCartIcon />} href={'/dashboard/counter'} />
       {/* <SimpleWidget /> */}
     </div>
   )

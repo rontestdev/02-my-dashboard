@@ -7,13 +7,29 @@ import { useEffect } from "react";
 
 type SimpleCounterProps = CounterProps;
 
+export interface CounterResponse {
+  method: string;
+  count: number;
+}
+
+const getApiCounter = async (): Promise<CounterResponse> => {
+  const res = await fetch('/api/counter');
+  const data = await res.json();
+  console.log("🚀 ~ getApiCounter ~ data:", data)
+  return data;
+}
+
 export const SimpleCounter = ({ initialCount = 0 }: SimpleCounterProps) => {
   const count = useAppSelector(state => state.counter.count);
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
+  /* useEffect(() => {
     dispatch(initCounterState(initialCount));
-  }, [dispatch, initialCount])
+  }, [dispatch, initialCount]) */
+
+  useEffect(() => {
+    getApiCounter().then(({ count }) => dispatch(initCounterState(count)))
+  }, [dispatch])
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
