@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { MenuItem } from "../interfaces/menu";
+import { MenuItem } from "../../interfaces/menu";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 

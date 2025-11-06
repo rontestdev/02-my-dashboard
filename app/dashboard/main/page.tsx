@@ -1,4 +1,4 @@
-import { SimpleWidget } from "@/shared/components/SimpleWidget";
+import { WidgetsGrid } from "@/shared/components";
 
 export default function MainPage() {
   return (
@@ -8,7 +8,7 @@ export default function MainPage() {
         <h2>Main page to dashboard</h2>
       </header>
       <div className="flex gap-2 p-2">
-        <SimpleWidget />
+        <WidgetsGrid />
       </div>
     </section>
   )

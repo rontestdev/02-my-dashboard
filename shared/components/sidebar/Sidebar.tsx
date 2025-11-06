@@ -1,7 +1,7 @@
 import { Atom, CircleDotIcon, ClockIcon, LayoutDashboardIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import { SidebarMenuItem } from "./SidebarMenuItem";
-import { MenuItem } from "../interfaces/menu";
+import { MenuItem } from "../../interfaces/menu";
 
 const menuItems: MenuItem[] = [
   {

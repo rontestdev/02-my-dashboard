@@ -1,7 +1,7 @@
 'use client';
 
 import { useAppDispatch, useAppSelector } from "@/store";
-import { type CounterProps } from "../hooks/useCounter";
+import { type CounterProps } from "../../hooks/useCounter";
 import { addOne, initCounterState, substractOne } from '@/store/counter/counterSlice';
 import { useEffect } from "react";
 
