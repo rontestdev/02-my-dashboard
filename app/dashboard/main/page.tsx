@@ -1,5 +1,15 @@
+import { SimpleWidget } from "@/shared/components/SimpleWidget";
+
 export default function MainPage() {
   return (
-    <div>Main dashboard page</div>
+    <section>
+      <header className="p-4">
+        <h1>Dashboard</h1>
+        <h2>Main page to dashboard</h2>
+      </header>
+      <div className="flex gap-2 p-2">
+        <SimpleWidget />
+      </div>
+    </section>
   )
 }

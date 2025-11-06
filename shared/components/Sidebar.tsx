@@ -1,4 +1,4 @@
-import { Atom, CircleDotIcon, ClockIcon, LayoutDashboardIcon } from "lucide-react";
+import { Atom, CircleDotIcon, ClockIcon, LayoutDashboardIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import { SidebarMenuItem } from "./SidebarMenuItem";
 import { MenuItem } from "../interfaces/menu";
@@ -21,6 +21,12 @@ const menuItems: MenuItem[] = [
     title: 'Pokemons',
     subtitle: 'Static Generation',
     icon: <CircleDotIcon />,
+  },
+  {
+    path: '/dashboard/favorites',
+    title: 'Favorites',
+    subtitle: 'Favorite pokemons',
+    icon: <StarIcon />,
   },
 ]
 
